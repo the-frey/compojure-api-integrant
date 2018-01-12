@@ -16,13 +16,8 @@ I'll probably package this as a template at some point. For now, grab the code, 
     
 Then you can def things like mongo via the system map, which can be used to call methods that require a connection:
 
-    user=> (ns bifrost-alpha.db.workflow)
-    ;; => nil
-
-    bifrost-alpha.db.workflow=> (def mongodb (:adapter/mongo integrant.repl.state/system))
+    user=> (def mongodb (:adapter/mongo integrant.repl.state/system))
     ;; => '#mongodb
-
-    bifrost-alpha.db.workflow=> (count (get-by-id mongodb "http://coop.co.uk/def/workflow/ambient-date-code-checks/5a3a7d628350cc44e447597b"))    
 
 Hit the configured port in `config.edn` in your browser and the app should be running.
 
